@@ -134,7 +134,7 @@
           document.getElementById("markdowncontainer").innerHTML = html;
         });
     };
-    // const location = window.location.pathname || "home.md";
-    openpage("home.md");
+    const location = window.location.pathname.split(".")[0] || "home.md";
+    openpage(location);
   </script>
 </html>

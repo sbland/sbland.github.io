@@ -128,14 +128,13 @@
       fetch(pageId)
         .then((response) => response.text())
         .then((data) => {
-          console.log(data);
           var converter = new showdown.Converter(),
             html = converter.makeHtml(data);
           document.getElementById("markdowncontainer").innerHTML = html;
         });
     };
     const location = window.location.pathname || "home.md";
-
+    console.log(location);
     openpage(`pages/${location}`);
   </script>
 </html>
